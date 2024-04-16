@@ -1,0 +1,11 @@
+<h1>Arma tu PC</h1>
+<p>Tamaño de la RAM: @for (ram of rams; track ram) {
+    <label >{{ram}}</label><input type="radio" name="ram" value={{ram}} [(ngModel)]="ramS">}</p>
+<p>Tipo de procesador: <select [(ngModel)]="procesadorS">@for (procesador of procesadores; track procesador) {
+    <option value={{procesador}} >{{procesador}}</option>}</select></p>
+<p>Tarjeta Gráfica: <input type="checkbox" [(ngModel)]="tarjetaS"> </p>
+<p>Discos Duros: @for (disco of discos; track disco) {
+    <label >{{disco}}</label><input type="radio" name="disco" value={{disco}} [(ngModel)]="discoS">}</p>
+<p>Fuentes de Alimentacion: @for (fuente of fuentes; track fuente) {
+    <label >{{fuente}}</label><input type="radio" name="fuente" value={{fuente}} [(ngModel)]="fuenteS">}</p>
+<button (click)="mostrar1()">Mostrar información</button>{{respuesta}}
